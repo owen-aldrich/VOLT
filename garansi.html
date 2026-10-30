@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Periksa garansi VOLT dan temukan layanan servis, bantuan, serta panduan perangkat Anda."
+    />
+    <title>Garansi &amp; Servis — VOLT</title>
+    <link rel="icon" href="assets/favicon.svg" />
+    <link rel="stylesheet" href="css/tokens.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/pages/information.css" />
+    <script src="js/data.js" defer></script>
+    <script src="js/cart.js" defer></script>
+    <script src="js/layout.js" defer></script>
+    <script src="js/forms.js" defer></script>
+    <script src="js/pages/warranty.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Lewati ke konten</a>
+    <header class="site-header" id="site-header"></header>
+    <main class="container information-main" id="main">
+      <section class="information-heading" aria-labelledby="warranty-title">
+        <span class="section-label">Layanan resmi</span>
+        <h1 id="warranty-title">Garansi &amp; Layanan Servis VOLT</h1>
+        <p>
+          Setiap perangkat VOLT dilengkapi perlindungan garansi resmi 15 bulan dan dukungan
+          perbaikan bersertifikasi nasional.
+        </p>
+      </section>
+
+      <section class="panel warranty-check" id="cek-garansi" aria-labelledby="check-title">
+        <h2 id="check-title">Periksa Status Garansi Perangkat</h2>
+        <p>
+          Masukkan 15 digit nomor IMEI perangkat Anda untuk memeriksa sisa masa garansi dan riwayat
+          servis.
+        </p>
+        <form class="warranty-form" id="warranty-form" novalidate>
+          <div class="field">
+            <label class="sr-only" for="imei">Nomor IMEI perangkat</label>
+            <input
+              id="imei"
+              name="imei"
+              inputmode="numeric"
+              autocomplete="off"
+              maxlength="15"
+              placeholder="Contoh IMEI: 358291048291024"
+              required
+              aria-describedby="imei-error imei-hint"
+            />
+            <p class="field-error" id="imei-error" aria-live="polite"></p>
+          </div>
+          <button class="button" type="submit">
+            Cek Status
+            <img src="assets/figma/warranty-arrow.svg" alt="" />
+          </button>
+        </form>
+        <p class="warranty-hint" id="imei-hint">
+          <img src="assets/figma/warranty-info.svg" alt="" />
+          <span>
+            Ketik
+            <strong>*#06#</strong>
+            pada dialer smartphone untuk melihat nomor IMEI.
+          </span>
+        </p>
+        <div class="notice warranty-result" id="warranty-result" role="status" hidden></div>
+      </section>
+
+      <section class="warranty-pillars" id="layanan" aria-labelledby="pillars-title">
+        <span class="section-label">Komitmen perlindungan</span>
+        <h2 id="pillars-title">Tiga Pilar Standar Pelayanan</h2>
+        <div class="pillar-grid">
+          <article class="pillar-card">
+            <span class="pillar-icon">
+              <img src="assets/figma/warranty-shield.svg" alt="" />
+            </span>
+            <h3>15 Bulan Garansi Resmi</h3>
+            <p>
+              Penggantian suku cadang asli dan perbaikan tanpa biaya tambahan untuk setiap cacat
+              produksi maupun malfungsi komponen internal.
+            </p>
+            <button class="pillar-link" type="button" data-service="battery">
+              Termasuk Layanan Baterai →
+            </button>
+          </article>
+          <article class="pillar-card">
+            <span class="pillar-icon">
+              <img src="assets/figma/warranty-location.svg" alt="" />
+            </span>
+            <h3>Jaringan Service Center</h3>
+            <p>
+              Tersedia di 18 kota besar di seluruh Indonesia dengan tenaga teknisi profesional yang
+              tersertifikasi langsung oleh prinsipal manufaktur.
+            </p>
+            <button class="pillar-link" type="button" data-service="locations">
+              Daftar Titik Lokasi →
+            </button>
+          </article>
+          <article class="pillar-card">
+            <span class="pillar-icon">
+              <img src="assets/figma/warranty-truck.svg" alt="" />
+            </span>
+            <h3>Layanan Antar-Jemput Gratis</h3>
+            <p>
+              Kurir tersertifikasi kami menjemput dan mengantar kembali perangkat langsung dari
+              pintu hunian Anda dengan asuransi pengiriman penuh.
+            </p>
+            <button class="pillar-link" type="button" data-service="pickup">
+              Klaim Pengantaran →
+            </button>
+          </article>
+        </div>
+      </section>
+
+      <section class="concierge" id="panduan" aria-labelledby="help-title">
+        <div>
+          <h2 id="help-title">Butuh bantuan langsung mengenai garansi?</h2>
+          <p>
+            Tim spesialis purna jual kami siap memandu Anda dalam pengecekan unit maupun penjadwalan
+            inspeksi perangkat.
+          </p>
+          <button class="text-button pillar-link" type="button" data-service="guide">
+            Baca Panduan Pengguna →
+          </button>
+        </div>
+        <div class="contact-list">
+          <div class="contact-item">
+            <span class="contact-icon"><img src="assets/figma/warranty-phone.svg" alt="" /></span>
+            <dl>
+              <dt>Hotline Bebas Pulsa</dt>
+              <dd><a href="tel:+628127138956">08127138956</a></dd>
+            </dl>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">
+              <img src="assets/figma/warranty-whatsapp.svg" alt="" />
+            </span>
+            <dl>
+              <dt>WhatsApp Layanan Resmi</dt>
+              <dd>
+                <a href="https://wa.me/6281288990011" target="_blank" rel="noopener noreferrer">
+                  0812-8899-0011
+                </a>
+              </dd>
+            </dl>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon"><img src="assets/figma/warranty-clock.svg" alt="" /></span>
+            <dl>
+              <dt>Jam Operasional Konsultasi</dt>
+              <dd>Senin–Sabtu, 09.00–18.00 WIB</dd>
+            </dl>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer" id="site-footer"></footer>
+  </body>
+</html>

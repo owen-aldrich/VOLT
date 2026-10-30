@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="description"
+      content="Masuk ke akun demo VOLT untuk mencoba alur belanja smartphone."
+    />
+    <title>Masuk ke Akun — VOLT</title>
+    <link rel="icon" href="assets/favicon.svg" />
+    <link rel="stylesheet" href="css/tokens.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/pages/auth.css" />
+    <script src="js/data.js" defer></script>
+    <script src="js/cart.js" defer></script>
+    <script src="js/layout.js" defer></script>
+    <script src="js/forms.js" defer></script>
+    <script src="js/pages/auth.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Lewati ke konten</a>
+    <header id="site-header" class="site-header"></header>
+    <main id="main" class="container auth-main">
+      <a class="back-link" href="index.html">← Kembali ke Beranda</a>
+      <section class="panel auth-card" aria-labelledby="auth-title">
+        <h1 id="auth-title">Masuk ke Akun Anda</h1>
+        <p class="auth-intro">
+          Akses status pesanan, riwayat garansi resmi, dan penawaran eksklusif.
+        </p>
+        <div class="social-buttons">
+          <button class="button secondary social-button" type="button" data-social="Google">
+            <img src="assets/figma/google.svg" width="16" height="16" alt="" />
+            Lanjutkan dengan Google
+          </button>
+          <button class="button secondary social-button" type="button" data-social="Apple">
+            <img src="assets/figma/apple.svg" width="16" height="16" alt="" />
+            Lanjutkan dengan Apple
+          </button>
+        </div>
+        <div class="form-divider">atau masuk dengan email</div>
+        <form class="auth-form" id="auth-form" data-mode="login" novalidate>
+          <div class="field">
+            <label for="identity">Email atau Nomor Ponsel</label>
+            <input
+              id="identity"
+              name="identity"
+              autocomplete="username"
+              placeholder="nama@email.com"
+              required
+              aria-describedby="identity-error"
+            />
+            <p id="identity-error" class="field-error" aria-live="polite"></p>
+          </div>
+          <div class="field">
+            <div class="password-label">
+              <label for="password">Kata Sandi</label>
+              <button class="text-button" type="button" data-forgot>Lupa kata sandi?</button>
+            </div>
+            <div class="password-wrap">
+              <input
+                id="password"
+                name="password"
+                type="password"
+                autocomplete="current-password"
+                placeholder="••••••••••••"
+                required
+                minlength="8"
+                aria-describedby="password-error"
+              />
+              <button
+                class="icon-button password-toggle"
+                type="button"
+                data-toggle-password="password"
+                aria-label="Tampilkan sandi"
+                aria-pressed="false"
+              >
+                <img src="assets/figma/password-eye.svg" alt="" />
+              </button>
+            </div>
+            <p id="password-error" class="field-error" aria-live="polite"></p>
+          </div>
+          <label class="check-row">
+            <input name="remember" type="checkbox" />
+            <span>Ingat saya di perangkat ini</span>
+          </label>
+          <button class="button full" type="submit">Masuk Sekarang</button>
+        </form>
+        <p class="auth-switch">
+          Belum memiliki akun VOLT?
+          <a href="daftar.html">Buat Akun Baru</a>
+        </p>
+      </section>
+      <p class="auth-security">
+        <img src="assets/figma/lock.svg" alt="" />
+        Terlindungi enkripsi SSL 256-bit standar industri.
+      </p>
+      <p class="auth-demo">Akun demo · gunakan data contoh, bukan kata sandi asli.</p>
+    </main>
+    <footer class="site-footer" id="site-footer"></footer>
+  </body>
+</html>

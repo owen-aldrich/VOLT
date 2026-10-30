@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="Buat akun demo VOLT dan jelajahi smartphone pilihan Anda." />
+    <title>Buat Akun Baru — VOLT</title>
+    <link rel="icon" href="assets/favicon.svg" />
+    <link rel="stylesheet" href="css/tokens.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/pages/auth.css" />
+    <script src="js/data.js" defer></script>
+    <script src="js/cart.js" defer></script>
+    <script src="js/layout.js" defer></script>
+    <script src="js/forms.js" defer></script>
+    <script src="js/pages/auth.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Lewati ke konten</a>
+    <header id="site-header" class="site-header"></header>
+    <main id="main" class="container auth-main signup-main">
+      <a class="back-link" href="index.html">← Kembali ke Beranda</a>
+      <section class="panel auth-card signup-card" aria-labelledby="auth-title">
+        <h1 id="auth-title">Buat Akun VOLT</h1>
+        <p class="auth-intro">
+          Daftar untuk menikmati garansi resmi 15 bulan, gratis ongkir se-Indonesia, dan pelacakan
+          pesanan real-time.
+        </p>
+        <div class="social-buttons">
+          <button class="button secondary social-button" type="button" data-social="Google">
+            <img src="assets/figma/google-signup.svg" width="20" height="20" alt="" />
+            Daftar cepat dengan Google
+          </button>
+        </div>
+        <div class="form-divider">atau isi formulir pendaftaran</div>
+        <form class="auth-form" id="auth-form" data-mode="signup" novalidate>
+          <div class="field">
+            <label for="fullName">Nama Lengkap</label>
+            <input
+              id="fullName"
+              name="fullName"
+              autocomplete="name"
+              placeholder="Nama sesuai KTP/identitas"
+              required
+              aria-describedby="fullName-error"
+            />
+            <p class="field-error" id="fullName-error" aria-live="polite"></p>
+          </div>
+          <div class="field">
+            <label for="email">Alamat Email</label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              autocomplete="email"
+              placeholder="nama@email.com"
+              required
+              aria-describedby="email-error"
+            />
+            <p class="field-error" id="email-error" aria-live="polite"></p>
+          </div>
+          <div class="field">
+            <label for="phone">Nomor WhatsApp / Ponsel</label>
+            <input
+              id="phone"
+              name="phone"
+              type="tel"
+              autocomplete="tel"
+              placeholder="0812-xxxx-xxxx"
+              required
+              aria-describedby="phone-error"
+            />
+            <p class="field-error" id="phone-error" aria-live="polite"></p>
+          </div>
+          <div class="field">
+            <label for="password">Kata Sandi</label>
+            <div class="password-wrap">
+              <input
+                id="password"
+                name="password"
+                type="password"
+                autocomplete="new-password"
+                placeholder="Minimal 8 karakter"
+                required
+                minlength="8"
+                aria-describedby="password-error"
+              />
+              <button
+                class="icon-button password-toggle"
+                type="button"
+                data-toggle-password="password"
+                aria-label="Tampilkan sandi"
+                aria-pressed="false"
+              >
+                <img src="assets/figma/password-hidden.svg" alt="" />
+              </button>
+            </div>
+            <p class="field-error" id="password-error" aria-live="polite"></p>
+          </div>
+          <div class="field">
+            <label for="confirm">Konfirmasi Kata Sandi</label>
+            <div class="password-wrap">
+              <input
+                id="confirm"
+                name="confirm"
+                type="password"
+                autocomplete="new-password"
+                placeholder="Ulangi kata sandi"
+                required
+                aria-describedby="confirm-error"
+              />
+              <button
+                class="icon-button password-toggle"
+                type="button"
+                data-toggle-password="confirm"
+                aria-label="Tampilkan sandi"
+                aria-pressed="false"
+              >
+                <img src="assets/figma/password-hidden.svg" alt="" />
+              </button>
+            </div>
+            <p class="field-error" id="confirm-error" aria-live="polite"></p>
+          </div>
+          <div class="field">
+            <div class="check-row">
+              <input
+                type="checkbox"
+                id="terms"
+                name="terms"
+                required
+                aria-describedby="terms-error"
+              />
+              <label for="terms">
+                Saya menyetujui
+                <a href="#syarat" data-policy="terms">Syarat &amp; Ketentuan</a>
+                serta
+                <a href="#privasi" data-policy="privacy">Kebijakan Privasi</a>
+                VOLT.
+              </label>
+            </div>
+            <p class="field-error" id="terms-error" aria-live="polite"></p>
+          </div>
+          <button class="button full" type="submit">Daftar Akun Baru →</button>
+        </form>
+        <p class="auth-switch">
+          Sudah memiliki akun?
+          <a href="masuk.html">Masuk ke Akun</a>
+        </p>
+      </section>
+      <p class="auth-demo">Pendaftaran demo · data Anda tidak dikirim ke server.</p>
+    </main>
+    <footer class="site-footer" id="site-footer"></footer>
+  </body>
+</html>

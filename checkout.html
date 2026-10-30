@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="description"
+      content="Lengkapi alamat pengiriman dan periksa ringkasan pesanan VOLT Anda."
+    />
+    <title>Checkout — VOLT</title>
+    <link rel="icon" href="assets/favicon.svg" />
+    <link rel="stylesheet" href="css/tokens.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/pages/commerce.css" />
+    <script src="js/data.js" defer></script>
+    <script src="js/cart.js" defer></script>
+    <script src="js/layout.js" defer></script>
+    <script src="js/forms.js" defer></script>
+    <script src="js/pages/checkout.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Lewati ke konten</a>
+    <header class="site-header" id="site-header"></header>
+    <main class="container checkout-main" id="main">
+      <h1>Checkout</h1>
+      <div id="checkout-content">
+        <div class="checkout-layout">
+          <section class="panel" aria-labelledby="product-heading">
+            <h2 id="product-heading">Produk</h2>
+            <div id="checkout-products"></div>
+          </section>
+          <div class="checkout-right">
+            <section class="panel">
+              <h2>Alamat pengiriman</h2>
+              <form id="shipping-form" class="shipping-form" novalidate>
+                <div class="field">
+                  <label for="address">Alamat</label>
+                  <textarea
+                    id="address"
+                    name="address"
+                    autocomplete="street-address"
+                    placeholder="Jl. Senopati Raya No. 44, Kebayoran Baru"
+                    required
+                    aria-describedby="address-error"
+                  ></textarea>
+                  <p id="address-error" class="field-error" aria-live="polite"></p>
+                </div>
+                <div class="field">
+                  <label for="city">Kota</label>
+                  <input
+                    id="city"
+                    name="city"
+                    autocomplete="address-level2"
+                    placeholder="Jakarta Selatan"
+                    required
+                    aria-describedby="city-error"
+                  />
+                  <p id="city-error" class="field-error" aria-live="polite"></p>
+                </div>
+                <div class="field">
+                  <label for="country">Negara</label>
+                  <input
+                    id="country"
+                    name="country"
+                    autocomplete="country-name"
+                    value="Indonesia"
+                    required
+                    aria-describedby="country-error"
+                  />
+                  <p id="country-error" class="field-error" aria-live="polite"></p>
+                </div>
+                <button type="submit" class="sr-only" tabindex="-1">Validasi alamat</button>
+              </form>
+            </section>
+            <section class="panel checkout-payment">
+              <h2>Ringkasan</h2>
+              <div class="summary-row">
+                <span>Subtotal</span>
+                <span data-checkout-total></span>
+              </div>
+              <div class="summary-row">
+                <span>Ongkir</span>
+                <span>Gratis</span>
+              </div>
+              <div class="summary-row total">
+                <strong class="checkout-total">Total</strong>
+                <strong data-checkout-total></strong>
+              </div>
+              <button
+                class="button full"
+                type="submit"
+                form="shipping-form"
+                id="pay-button"
+                disabled
+              >
+                Bayar Sekarang
+              </button>
+              <p class="demo-caption">Simulasi pesanan. Tidak ada pembayaran sungguhan.</p>
+            </section>
+          </div>
+        </div>
+        <div class="checkout-trust">
+          <span>✓ Garansi Resmi 100% Original</span>
+          <span>⇄ Pengembalian 7 Hari</span>
+          <span>♧ Enkripsi 256-bit SSL</span>
+        </div>
+      </div>
+      <section class="panel empty-state" id="checkout-empty" hidden>
+        <h2>Belum ada produk untuk dibayar.</h2>
+        <p>Pilih smartphone Anda terlebih dahulu.</p>
+        <a class="button" href="katalog.html">Jelajahi Produk</a>
+      </section>
+      <section class="panel empty-state" id="order-complete" tabindex="-1" hidden>
+        <h2>Pesanan berhasil</h2>
+        <p>Terima kasih telah mencoba VOLT. Pesanan ini adalah simulasi.</p>
+        <a class="button" href="index.html">Kembali ke Beranda</a>
+      </section>
+    </main>
+    <footer class="site-footer" id="site-footer"></footer>
+  </body>
+</html>

@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Keranjang Belanja — VOLT</title>
+    <meta
+      name="description"
+      content="Periksa smartphone pilihan Anda dan lanjutkan ke checkout VOLT."
+    />
+    <link rel="icon" href="assets/favicon.svg" />
+    <link rel="stylesheet" href="css/tokens.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/pages/commerce.css" />
+    <script src="js/data.js" defer></script>
+    <script src="js/cart.js" defer></script>
+    <script src="js/layout.js" defer></script>
+    <script src="js/pages/cart-page.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Lewati ke konten</a>
+    <header class="site-header" id="site-header"></header>
+    <main class="container cart-main" id="main">
+      <div class="breadcrumb-row">
+        <nav aria-label="Breadcrumb">
+          <a href="index.html">Beranda</a>
+          <span aria-hidden="true">/</span>
+          <span>Keranjang Belanja</span>
+        </nav>
+        <p class="muted" id="cart-status" aria-live="polite"></p>
+      </div>
+      <div id="cart-content" class="commerce-columns">
+        <section aria-labelledby="cart-title">
+          <div class="cart-list-heading">
+            <h1 id="cart-title">Keranjang Belanja</h1>
+            <p id="selected-count"></p>
+          </div>
+          <div class="panel cart-items" id="cart-items"></div>
+        </section>
+        <aside aria-label="Ringkasan belanja">
+          <section class="panel order-summary">
+            <h2>Ringkasan Pesanan</h2>
+            <div class="summary-row">
+              <span id="summary-label"></span>
+              <span data-cart-total></span>
+            </div>
+            <div class="summary-row">
+              <span>Estimasi Pengiriman</span>
+              <span class="accent">Gratis Seluruh Indonesia</span>
+            </div>
+            <div class="summary-row total">
+              <div>
+                <span>Total Pembayaran</span>
+                <p class="small muted">Termasuk pajak</p>
+              </div>
+              <strong data-cart-total></strong>
+            </div>
+            <a class="button full" href="checkout.html?source=cart">Lanjut ke Pembayaran →</a>
+            <div class="assurances">
+              <p>
+                <strong>Garansi Resmi 100% Original:</strong>
+                Didukung penuh oleh Service Center VOLT Authorized di 34 provinsi.
+              </p>
+              <p>
+                <strong>Pengembalian 7 Hari Mudah:</strong>
+                Garansi unit baru jika terdapat kendala fungsional manufaktur.
+              </p>
+              <p>
+                <strong>Enkripsi 256-bit SSL:</strong>
+                Seluruh transaksi dilindungi standar keamanan bank internasional.
+              </p>
+            </div>
+          </section>
+          <section class="checkout-help">
+            <div>
+              <h3>Butuh Bantuan Checkout?</h3>
+              <p>Tim VOLT Concierge siaga 09.00–21.00 WIB</p>
+            </div>
+            <a href="https://wa.me/628127138956" target="_blank" rel="noopener noreferrer">
+              Chat WhatsApp
+            </a>
+          </section>
+        </aside>
+      </div>
+      <section class="panel empty-state" id="empty-cart" hidden>
+        <h1>Keranjang Anda masih kosong.</h1>
+        <p>Temukan smartphone VOLT yang cocok untuk keseharian Anda.</p>
+        <a class="button" href="katalog.html">Jelajahi Produk →</a>
+      </section>
+    </main>
+    <footer class="site-footer" id="site-footer"></footer>
+  </body>
+</html>

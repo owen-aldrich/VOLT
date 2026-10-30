@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="description"
+      content="Temukan smartphone VOLT. Harga transparan, garansi resmi 15 bulan, dan pengiriman gratis ke seluruh Indonesia."
+    />
+    <meta name="theme-color" content="#fbf9f4" />
+    <title>VOLT — Charged for What's Next.</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="preload" href="assets/inter-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="css/tokens.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/pages/home.css" />
+    <script src="js/data.js" defer></script>
+    <script src="js/cart.js" defer></script>
+    <script src="js/layout.js" defer></script>
+    <script src="js/pages/home.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Lewati ke konten</a>
+    <header class="site-header" id="site-header"></header>
+    <main class="container home-main" id="main">
+      <section class="hero" aria-labelledby="hero-title">
+        <img
+          class="hero-picture"
+          src="assets/figma/hero.png"
+          alt="Ponsel titanium di atas meja batu berwarna krem"
+          width="1672"
+          height="941"
+          fetchpriority="high"
+        />
+        <div class="hero-content">
+          <span class="edition">Edisi 2025</span>
+          <h1 id="hero-title">
+            CHARGED FOR
+            <br />
+            WHAT'S NEXT.
+          </h1>
+          <p>
+            Smartphone resmi dengan garansi terverifikasi, harga transparan, dan pengiriman gratis
+            ke seluruh penjuru Indonesia.
+          </p>
+          <div class="hero-actions">
+            <a class="button" href="checkout.html?product=apex-pro">Beli Sekarang</a>
+            <a class="button secondary" href="katalog.html">Pelajari Lebih Lanjut</a>
+          </div>
+        </div>
+      </section>
+      <section class="home-products" aria-labelledby="products-title">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">Produk</span>
+            <h2 id="products-title">Pilihan Smartphone Terbaru &amp; Terpopuler.</h2>
+          </div>
+          <div class="tabs" role="tablist" aria-label="Urutan produk">
+            <button
+              role="tab"
+              type="button"
+              id="tab-new"
+              data-sort="new"
+              aria-selected="true"
+              aria-controls="featured-products"
+            >
+              Terbaru
+            </button>
+            <button
+              role="tab"
+              type="button"
+              id="tab-best"
+              data-sort="best"
+              aria-selected="false"
+              tabindex="-1"
+              aria-controls="featured-products"
+            >
+              Terlaris
+            </button>
+            <button
+              role="tab"
+              type="button"
+              id="tab-save"
+              data-sort="save"
+              aria-selected="false"
+              tabindex="-1"
+              aria-controls="featured-products"
+            >
+              Hemat
+            </button>
+          </div>
+        </div>
+        <div
+          class="product-grid"
+          id="featured-products"
+          role="tabpanel"
+          aria-labelledby="tab-new"
+        ></div>
+      </section>
+      <section class="explore-section" aria-labelledby="explore-title">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">Jelajahi</span>
+            <h2 id="explore-title">Inovasi yang Mendefinisikan Pengalaman Anda.</h2>
+          </div>
+        </div>
+        <div class="editorial-grid">
+          <article class="editorial-card">
+            <img
+              src="assets/figma/camera.png"
+              alt="Detail lensa kamera smartphone"
+              width="382"
+              height="256"
+              loading="lazy"
+            />
+            <div class="editorial-content">
+              <h3>Kamera</h3>
+              <p>
+                Sensor 1-inci dan reproduksi warna presisi studio dalam genggaman. Algoritma
+                komputasional murni tanpa noise berlebih.
+              </p>
+              <a href="katalog.html?seri=Ultra">Jelajahi Seri Kamera →</a>
+            </div>
+          </article>
+          <article class="editorial-card">
+            <img
+              src="assets/figma/battery.png"
+              alt="Susunan komponen dan baterai smartphone"
+              width="382"
+              height="256"
+              loading="lazy"
+            />
+            <div class="editorial-content">
+              <h3>Baterai</h3>
+              <p>
+                Kapasitas hingga 5.500 mAh dengan arsitektur dual-cell dan sistem proteksi suhu
+                berlapis kecerdasan baterai cerdas.
+              </p>
+              <a href="katalog.html?seri=Nova">Lihat Smartphone Daya Tahan Tinggi →</a>
+            </div>
+          </article>
+          <article class="editorial-card">
+            <img
+              src="assets/figma/performance.png"
+              alt="Chipset berkinerja tinggi untuk smartphone"
+              width="382"
+              height="256"
+              loading="lazy"
+            />
+            <div class="editorial-content">
+              <h3>Performa</h3>
+              <p>
+                Chipset generasi terbaru untuk gaming stabil di 120 FPS, pemrosesan AI lokal instan,
+                dan multitasking efisien tanpa throttling.
+              </p>
+              <a href="katalog.html?seri=Apex">Pelajari Performa Ekstrem →</a>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer" id="site-footer"></footer>
+    <noscript>
+      Aktifkan JavaScript untuk menampilkan produk, navigasi, dan fitur keranjang VOLT.
+    </noscript>
+  </body>
+</html>
